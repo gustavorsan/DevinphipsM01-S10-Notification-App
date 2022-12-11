@@ -1,7 +1,7 @@
 <!-- conteudo notificações -->
 
 <div class="container-notifications mx-3 mx-md-auto offset-md-2 col-md-7">
-  <app-filter></app-filter>
+  <app-filter (filterEvent)="filterItens($event)"></app-filter>
   <div class="list-group d-flex mt-5">
     <a
       *ngFor="let item of listaDeNotificacoes; index as indice"

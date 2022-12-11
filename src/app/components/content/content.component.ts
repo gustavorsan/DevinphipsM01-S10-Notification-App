@@ -25,4 +25,23 @@ export class ContentComponent implements OnInit {
       return item;
     });
   }
+
+
+
+  filterItens(filterType:any){
+    
+   let  currentItens: INotificacao[] = [];
+    
+   switch(filterType){
+      case 'lidos': currentItens = NOTIFICATIONS_MOCK.filter(notificacao => {return notificacao.lido}) 
+            break;
+      case 'naoLidos': currentItens = NOTIFICATIONS_MOCK.filter(notificacao => {return !notificacao.lido}) 
+            break;
+      default: currentItens = NOTIFICATIONS_MOCK;
+        break
+   }
+
+
+   this.listaDeNotificacoes = currentItens;
+  }
 }

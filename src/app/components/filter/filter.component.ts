@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent {
+  @Output() filterEvent = new EventEmitter<string>();
+
+
+
+
+  sendFilterType(type: 'todos'|'naoLidos'|'lidos'){
+     this.filterEvent.emit(type);
+  }
+
 
 }
