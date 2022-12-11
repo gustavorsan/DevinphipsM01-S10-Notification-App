@@ -1,27 +1,30 @@
 # NotificationApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Esse projeto foi criado utilizando a [Angular CLI](https://github.com/angular/angular-cli) versão 15.0.1
 
-## Development server
+## Escopo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Desenvolver uma aplicação angular aplicando os seguintes conceitos :
+  * Filtragem de itens;
+  * Rotas(Criação de páginas);
+  * Comunicação entre componente;
 
-## Code scaffolding
+## Tecnologias
+  * Angular CLI 15.0.1
+  * Bootstrap 5.0.2
+  * Node.js 16.13.1
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Como instalar
 
-## Build
+ 1. Baixe ou clone este repositório usando `git clone https://github.com/gustavorsan/DevinphipsM01-S10-Notification-App.git`; 
+ 2. Dentro do diretório, instale as dependências usando `npm install`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Como executar
 
-## Running unit tests
+Execute o comando `npm start` dentro do diretório, a aplicação seve ser acessada através do endereço `http://localhost:4200/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Como compilar/construir
 
-## Running end-to-end tests
+Execute `ng build` para buildar o projeto. Para buildar a versão de produção adicione a flag `--prod`. Os arquivos serão armazenados do diretório `dist`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
