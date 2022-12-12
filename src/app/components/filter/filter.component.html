@@ -1,5 +1,28 @@
 <div class="btn-group" role="group" aria-label="Filter group">
-  <button type="button" class="btn btn-outline-secondary"  [ngClass]="{'active': filterType === 'todos'}" (click)="sendFilterType('todos')">Todos</button>
-  <button type="button" class="btn btn-outline-secondary" [ngClass]="{'active': filterType === 'lidos'}" (click)="sendFilterType('lidos')" >Lidos</button>
-  <button type="button" class="btn btn-outline-secondary" [ngClass]="{'active': filterType === 'naoLidos'}" (click)="sendFilterType('naoLidos')">Não Lidos</button>
+  <button 
+    type="button" 
+    class="btn btn-outline-secondary"  
+    routerLinkActive="active"
+    [ngClass]="{'active': filterType === 'todos'}"
+    (click)="sendFilterType('todos')"
+    >
+    Todos
+  </button>
+  <button 
+    type="button" 
+    class="btn btn-outline-secondary" 
+    [ngClass]="{'active': filterType === 'lidos'}"
+    (click)="sendFilterType('lidos')"
+    >
+    Lidos
+  </button>
+  <button 
+    type="button" 
+    class="btn btn-outline-secondary" 
+    routerLinkActive="active"
+    [ngClass]="{'active': filterType === 'nao-lidos'}"
+    (click)="sendFilterType('nao-lidos')"
+    >
+    Não Lidos
+  </button>
 </div>

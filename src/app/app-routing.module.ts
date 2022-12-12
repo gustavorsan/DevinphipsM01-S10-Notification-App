@@ -7,10 +7,14 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'prefix'
+    pathMatch: 'full'
   },
   {
     path: 'home',
+    component: HomeComponent,
+  },
+  { 
+    path:'home/:type',
     component: HomeComponent
   },
   {

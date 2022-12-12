@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { INotificacao } from 'src/app/models/notificacao.model';
 import { NOTIFICATIONS_MOCK } from 'src/app/utils/notifications-mock';
 
@@ -9,9 +10,12 @@ import { NOTIFICATIONS_MOCK } from 'src/app/utils/notifications-mock';
 })
 export class ContentComponent implements OnInit {
   listaDeNotificacoes: INotificacao[] = [];
+  
+  constructor(){}
 
   ngOnInit(): void {
     this.listaDeNotificacoes = NOTIFICATIONS_MOCK;
+    
   }
 
   lerNotificacao(indice: number) {
@@ -35,7 +39,7 @@ export class ContentComponent implements OnInit {
    switch(filterType){
       case 'lidos': currentItens = NOTIFICATIONS_MOCK.filter(notificacao => {return notificacao.lido}) 
             break;
-      case 'naoLidos': currentItens = NOTIFICATIONS_MOCK.filter(notificacao => {return !notificacao.lido}) 
+      case 'nao-lidos': currentItens = NOTIFICATIONS_MOCK.filter(notificacao => {return !notificacao.lido}) 
             break;
       default: currentItens = NOTIFICATIONS_MOCK;
         break
