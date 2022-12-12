@@ -9,9 +9,10 @@ export class FilterComponent {
   @Output() filterEvent = new EventEmitter<string>();
 
 
-
+  filterType = 'todos';
 
   sendFilterType(type: 'todos'|'naoLidos'|'lidos'){
+    this.filterType = type;
      this.filterEvent.emit(type);
   }
 
